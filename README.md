@@ -18,4 +18,4 @@ sudo reboot
 
 pip3 install websockets
 
-3. Put it on /home/'user'/ directory
+3. Put it on    /home/'user'/    directory
