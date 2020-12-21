@@ -2,7 +2,7 @@
 Python script to check BTC / USD last price and show it on a raspberry pi Sense Hat
 
 
-![BTC Sense Hat](https://photos.app.goo.gl/fgtBMrF62J3LJurSA)
+
 
 Get sense hat: https://www.amazon.es/gp/product/B014T2IHQ8/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=sodapop-21&creative=24630&linkCode=as2&creativeASIN=B014T2IHQ8&linkId=d121eeef458a089649f38b625c17818d
 
@@ -22,3 +22,9 @@ sudo reboot
 pip3 install websockets
 
 3. Put it on    /home/'user'/    directory
+
+
+![BTC Sense Hat](IMG_1341.jpg)
+![BTC Sense Hat](IMG_1332.jpg)
+![BTC Sense Hat](IMG_1335.jpg)
+![BTC Sense Hat](IMG_1343.jpg)
