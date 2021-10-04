@@ -5,11 +5,13 @@ import sys
 import json
 import sense_hat
 
+
 initvalue = 0
 close = False
-time=3
+time=4
 sense = sense_hat.SenseHat()
-sense.set_rotation(90)
+orientation = 90;
+sense.set_rotation(orientation)
 sense.low_light = True
 
 X = [255, 0, 0]  # Red
@@ -50,6 +52,7 @@ bitcoin = [
 ]
 
 def on_message(ws, message):
+    sense.set_pixels(bitcoin)
     # print(message)
     # Receive messages in a loop and print them out
     if message.find("lastPrice") > 0:
@@ -58,35 +61,42 @@ def on_message(ws, message):
             if (jsonMessage.get("data")[0].get("lastPrice")):
                 lastvalueSTR = int(jsonMessage.get("data")[0].get("lastPrice"))
                 lastvalue = int(float(lastvalueSTR))
-                allowed_error = 3
+                allowed_error = 11
                 global initvalue
                 difff = lastvalue - initvalue
                 absdifff = abs(lastvalue - initvalue)
                 # print(difff)
 
                 if absdifff >= allowed_error:
+                    sense.set_pixels(bitcoin)
+                    #time.sleep(2)
                     initvalue = lastvalue
                     if difff >= 0:
-                        sense.show_message(str(lastvalueSTR), text_colour=(0, 255, 0), back_colour=(0, 0, 0))
+                        sense.show_message(str(lastvalueSTR)+" $", text_colour=(0, 125, 0), back_colour=(0, 0, 0))
                         print("GREEN")
                     else:
-                        sense.show_message(str(lastvalueSTR), text_colour=(255, 0, 0), back_colour=(0, 0, 0))
+                        sense.show_message(str(lastvalueSTR)+" $", text_colour=(255, 0, 0), back_colour=(0, 0, 0))
                         print("RED")
 
-                    print(lastvalueSTR)
+                    #print(lastvalueSTR)
+                    #time.sleep(1)
+                    #sense.set_pixels(bitcoin)
 
         else:
-            print("?")
+            #print("?")
+            sense.set_pixels(bitcoin)
 
 
 def on_error(ws, error):
     print(error)
-    sense.set_pixels(question_mark)
+    #sense.set_pixels(question_mark)
+    sense.set_pixels(bitcoin)
 
 
 def on_close(ws):
     print("### closed ###")
-    sense.set_pixels(exclamation_mark)
+    #sense.set_pixels(exclamation_mark)
+    sense.set_pixels(bitcoin)
 
 
 def on_open(ws):
