@@ -24,6 +24,13 @@ pip3 install websockets
 3. Put it on    /home/'user'/    directory
 
 
+
+[![Watch the video](https://img.youtube.com/vi/6tJn6tiZt7Y/maxresdefault.jpg)](https://youtu.be/6tJn6tiZt7Y)
+
+[![Watch the video](https://img.youtube.com/vi/Pa0huNfDCEU/maxresdefault.jpg)](https://youtu.be/Pa0huNfDCEU)
+
+
+
 ![BTC Sense Hat](IMG_1341.jpg)
 ![BTC Sense Hat](IMG_1332.jpg)
 ![BTC Sense Hat](IMG_1335.jpg)
