@@ -13,6 +13,8 @@ sudo reboot
 2. Install websockets dependecies
 
 pip3 install websockets
+OR
+pip3 install websocket-client
 
 3. Put it on    /home/'user'/    directory
 
