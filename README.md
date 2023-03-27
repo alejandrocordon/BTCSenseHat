@@ -20,6 +20,9 @@ pip3 install websocket-client
 
 ./python3 BTCSENSEHAT.py
 
+Kown Issues
+There are some problems with Raspbian 64b
+
 
 [![Watch the video](https://img.youtube.com/vi/6tJn6tiZt7Y/maxresdefault.jpg)](https://youtu.be/6tJn6tiZt7Y)
 
